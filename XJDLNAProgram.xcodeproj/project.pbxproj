@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE192C40218AA7AB0076E3F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C3F218AA7AB0076E3F6 /* AppDelegate.m */; };
+		EE192C43218AA7AB0076E3F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C42218AA7AB0076E3F6 /* ViewController.m */; };
+		EE192C46218AA7AB0076E3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE192C44218AA7AB0076E3F6 /* Main.storyboard */; };
+		EE192C48218AA7B30076E3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE192C47218AA7B30076E3F6 /* Assets.xcassets */; };
+		EE192C4B218AA7B30076E3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE192C49218AA7B30076E3F6 /* LaunchScreen.storyboard */; };
+		EE192C4E218AA7B30076E3F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C4D218AA7B30076E3F6 /* main.m */; };
+		EE192C58218AA7B30076E3F6 /* XJDLNAProgramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C57218AA7B30076E3F6 /* XJDLNAProgramUITests.m */; };
+		EE192C6F218AA7DC0076E3F6 /* PltMediaController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */; };
+		EE192C70218AA7DC0076E3F6 /* WD_DMRControl.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */; };
+		EE192C71218AA7DC0076E3F6 /* WD_RenderDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */; };
+		EE192C72218AA7DC0076E3F6 /* WDTransportResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */; };
+		EE192C7B218AA8500076E3F6 /* DLNAHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C75218AA8500076E3F6 /* DLNAHeaderView.m */; };
+		EE192C7C218AA8500076E3F6 /* DLNAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C78218AA8500076E3F6 /* DLNAViewController.m */; };
+		EE192C7D218AA8500076E3F6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C7A218AA8500076E3F6 /* CustomTextField.m */; };
+		EE192C99218AA8B80076E3F6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE192C7F218AA8B80076E3F6 /* Info.plist */; };
+		EE192C9A218AA8B80076E3F6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C81218AA8B80076E3F6 /* MASCompositeConstraint.m */; };
+		EE192C9B218AA8B80076E3F6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C84218AA8B80076E3F6 /* MASConstraint.m */; };
+		EE192C9C218AA8B80076E3F6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C86218AA8B80076E3F6 /* MASConstraintMaker.m */; };
+		EE192C9D218AA8B80076E3F6 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C88218AA8B80076E3F6 /* MASLayoutConstraint.m */; };
+		EE192C9E218AA8B80076E3F6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C8C218AA8B80076E3F6 /* MASViewAttribute.m */; };
+		EE192C9F218AA8B80076E3F6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C8E218AA8B80076E3F6 /* MASViewConstraint.m */; };
+		EE192CA0218AA8B80076E3F6 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C90218AA8B80076E3F6 /* NSArray+MASAdditions.m */; };
+		EE192CA1218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C93218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		EE192CA2218AA8B80076E3F6 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C95218AA8B80076E3F6 /* View+MASAdditions.m */; };
+		EE192CA3218AA8B80076E3F6 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C98218AA8B80076E3F6 /* ViewController+MASAdditions.m */; };
+		EE192CA4218AA9C10076E3F6 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE192C63218AA7DC0076E3F6 /* Neptune.framework */; };
+		EE192CA6218AA9C10076E3F6 /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE192C64218AA7DC0076E3F6 /* Platinum.framework */; };
+		EE192CA9218AC5810076E3F6 /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE192C63218AA7DC0076E3F6 /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE192CAA218AC5810076E3F6 /* Platinum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE192C64218AA7DC0076E3F6 /* Platinum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE192C54218AA7B30076E3F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE192C33218AA7AB0076E3F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE192C3A218AA7AB0076E3F6;
+			remoteInfo = XJDLNAProgram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE192CA8218AA9C10076E3F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EE192CA9218AC5810076E3F6 /* Neptune.framework in Embed Frameworks */,
+				EE192CAA218AC5810076E3F6 /* Platinum.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE192C3B218AA7AB0076E3F6 /* XJDLNAProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJDLNAProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE192C3E218AA7AB0076E3F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE192C3F218AA7AB0076E3F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE192C41218AA7AB0076E3F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE192C42218AA7AB0076E3F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE192C45218AA7AB0076E3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE192C47218AA7B30076E3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE192C4A218AA7B30076E3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE192C4C218AA7B30076E3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE192C4D218AA7B30076E3F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE192C53218AA7B30076E3F6 /* XJDLNAProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJDLNAProgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE192C57218AA7B30076E3F6 /* XJDLNAProgramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJDLNAProgramUITests.m; sourceTree = "<group>"; };
+		EE192C59218AA7B30076E3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE192C63218AA7DC0076E3F6 /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neptune.framework; sourceTree = "<group>"; };
+		EE192C64218AA7DC0076E3F6 /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
+		EE192C65218AA7DC0076E3F6 /* PltMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PltMediaController.h; sourceTree = "<group>"; };
+		EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PltMediaController.mm; sourceTree = "<group>"; };
+		EE192C67218AA7DC0076E3F6 /* WD_DMRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WD_DMRControl.h; sourceTree = "<group>"; };
+		EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WD_DMRControl.mm; sourceTree = "<group>"; };
+		EE192C69218AA7DC0076E3F6 /* WD_RenderDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WD_RenderDeviceModel.h; sourceTree = "<group>"; };
+		EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WD_RenderDeviceModel.m; sourceTree = "<group>"; };
+		EE192C6B218AA7DC0076E3F6 /* WDTransportResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransportResponseInfo.h; sourceTree = "<group>"; };
+		EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransportResponseInfo.m; sourceTree = "<group>"; };
+		EE192C75218AA8500076E3F6 /* DLNAHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAHeaderView.m; sourceTree = "<group>"; };
+		EE192C76218AA8500076E3F6 /* DLNAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAViewController.h; sourceTree = "<group>"; };
+		EE192C77218AA8500076E3F6 /* DLNAHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAHeaderView.h; sourceTree = "<group>"; };
+		EE192C78218AA8500076E3F6 /* DLNAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAViewController.m; sourceTree = "<group>"; };
+		EE192C79218AA8500076E3F6 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		EE192C7A218AA8500076E3F6 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		EE192C7F218AA8B80076E3F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE192C80218AA8B80076E3F6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		EE192C81218AA8B80076E3F6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		EE192C82218AA8B80076E3F6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		EE192C83218AA8B80076E3F6 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		EE192C84218AA8B80076E3F6 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		EE192C85218AA8B80076E3F6 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		EE192C86218AA8B80076E3F6 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		EE192C87218AA8B80076E3F6 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		EE192C88218AA8B80076E3F6 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		EE192C89218AA8B80076E3F6 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		EE192C8A218AA8B80076E3F6 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		EE192C8B218AA8B80076E3F6 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		EE192C8C218AA8B80076E3F6 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		EE192C8D218AA8B80076E3F6 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		EE192C8E218AA8B80076E3F6 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		EE192C8F218AA8B80076E3F6 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		EE192C90218AA8B80076E3F6 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		EE192C91218AA8B80076E3F6 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		EE192C92218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		EE192C93218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		EE192C94218AA8B80076E3F6 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		EE192C95218AA8B80076E3F6 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		EE192C96218AA8B80076E3F6 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		EE192C97218AA8B80076E3F6 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		EE192C98218AA8B80076E3F6 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE192C38218AA7AB0076E3F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE192CA6218AA9C10076E3F6 /* Platinum.framework in Frameworks */,
+				EE192CA4218AA9C10076E3F6 /* Neptune.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE192C50218AA7B30076E3F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE192C32218AA7AB0076E3F6 = {
+			isa = PBXGroup;
+			children = (
+				EE192C3D218AA7AB0076E3F6 /* XJDLNAProgram */,
+				EE192C56218AA7B30076E3F6 /* XJDLNAProgramUITests */,
+				EE192C3C218AA7AB0076E3F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE192C3C218AA7AB0076E3F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C3B218AA7AB0076E3F6 /* XJDLNAProgram.app */,
+				EE192C53218AA7B30076E3F6 /* XJDLNAProgramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE192C3D218AA7AB0076E3F6 /* XJDLNAProgram */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C7E218AA8B80076E3F6 /* Masonry */,
+				EE192C74218AA8310076E3F6 /* VController */,
+				EE192C62218AA7DC0076E3F6 /* DLNA */,
+				EE192C3E218AA7AB0076E3F6 /* AppDelegate.h */,
+				EE192C3F218AA7AB0076E3F6 /* AppDelegate.m */,
+				EE192C41218AA7AB0076E3F6 /* ViewController.h */,
+				EE192C42218AA7AB0076E3F6 /* ViewController.m */,
+				EE192C44218AA7AB0076E3F6 /* Main.storyboard */,
+				EE192C47218AA7B30076E3F6 /* Assets.xcassets */,
+				EE192C49218AA7B30076E3F6 /* LaunchScreen.storyboard */,
+				EE192C4C218AA7B30076E3F6 /* Info.plist */,
+				EE192C4D218AA7B30076E3F6 /* main.m */,
+			);
+			path = XJDLNAProgram;
+			sourceTree = "<group>";
+		};
+		EE192C56218AA7B30076E3F6 /* XJDLNAProgramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C57218AA7B30076E3F6 /* XJDLNAProgramUITests.m */,
+				EE192C59218AA7B30076E3F6 /* Info.plist */,
+			);
+			path = XJDLNAProgramUITests;
+			sourceTree = "<group>";
+		};
+		EE192C62218AA7DC0076E3F6 /* DLNA */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C63218AA7DC0076E3F6 /* Neptune.framework */,
+				EE192C64218AA7DC0076E3F6 /* Platinum.framework */,
+				EE192C65218AA7DC0076E3F6 /* PltMediaController.h */,
+				EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */,
+				EE192C67218AA7DC0076E3F6 /* WD_DMRControl.h */,
+				EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */,
+				EE192C69218AA7DC0076E3F6 /* WD_RenderDeviceModel.h */,
+				EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */,
+				EE192C6B218AA7DC0076E3F6 /* WDTransportResponseInfo.h */,
+				EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */,
+			);
+			path = DLNA;
+			sourceTree = "<group>";
+		};
+		EE192C74218AA8310076E3F6 /* VController */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C79218AA8500076E3F6 /* CustomTextField.h */,
+				EE192C7A218AA8500076E3F6 /* CustomTextField.m */,
+				EE192C77218AA8500076E3F6 /* DLNAHeaderView.h */,
+				EE192C75218AA8500076E3F6 /* DLNAHeaderView.m */,
+				EE192C76218AA8500076E3F6 /* DLNAViewController.h */,
+				EE192C78218AA8500076E3F6 /* DLNAViewController.m */,
+			);
+			path = VController;
+			sourceTree = "<group>";
+		};
+		EE192C7E218AA8B80076E3F6 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				EE192C7F218AA8B80076E3F6 /* Info.plist */,
+				EE192C80218AA8B80076E3F6 /* MASCompositeConstraint.h */,
+				EE192C81218AA8B80076E3F6 /* MASCompositeConstraint.m */,
+				EE192C82218AA8B80076E3F6 /* MASConstraint+Private.h */,
+				EE192C83218AA8B80076E3F6 /* MASConstraint.h */,
+				EE192C84218AA8B80076E3F6 /* MASConstraint.m */,
+				EE192C85218AA8B80076E3F6 /* MASConstraintMaker.h */,
+				EE192C86218AA8B80076E3F6 /* MASConstraintMaker.m */,
+				EE192C87218AA8B80076E3F6 /* MASLayoutConstraint.h */,
+				EE192C88218AA8B80076E3F6 /* MASLayoutConstraint.m */,
+				EE192C89218AA8B80076E3F6 /* Masonry.h */,
+				EE192C8A218AA8B80076E3F6 /* MASUtilities.h */,
+				EE192C8B218AA8B80076E3F6 /* MASViewAttribute.h */,
+				EE192C8C218AA8B80076E3F6 /* MASViewAttribute.m */,
+				EE192C8D218AA8B80076E3F6 /* MASViewConstraint.h */,
+				EE192C8E218AA8B80076E3F6 /* MASViewConstraint.m */,
+				EE192C8F218AA8B80076E3F6 /* NSArray+MASAdditions.h */,
+				EE192C90218AA8B80076E3F6 /* NSArray+MASAdditions.m */,
+				EE192C91218AA8B80076E3F6 /* NSArray+MASShorthandAdditions.h */,
+				EE192C92218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				EE192C93218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				EE192C94218AA8B80076E3F6 /* View+MASAdditions.h */,
+				EE192C95218AA8B80076E3F6 /* View+MASAdditions.m */,
+				EE192C96218AA8B80076E3F6 /* View+MASShorthandAdditions.h */,
+				EE192C97218AA8B80076E3F6 /* ViewController+MASAdditions.h */,
+				EE192C98218AA8B80076E3F6 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE192C3A218AA7AB0076E3F6 /* XJDLNAProgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE192C5C218AA7B30076E3F6 /* Build configuration list for PBXNativeTarget "XJDLNAProgram" */;
+			buildPhases = (
+				EE192C37218AA7AB0076E3F6 /* Sources */,
+				EE192C38218AA7AB0076E3F6 /* Frameworks */,
+				EE192C39218AA7AB0076E3F6 /* Resources */,
+				EE192CA8218AA9C10076E3F6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XJDLNAProgram;
+			productName = XJDLNAProgram;
+			productReference = EE192C3B218AA7AB0076E3F6 /* XJDLNAProgram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE192C52218AA7B30076E3F6 /* XJDLNAProgramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE192C5F218AA7B30076E3F6 /* Build configuration list for PBXNativeTarget "XJDLNAProgramUITests" */;
+			buildPhases = (
+				EE192C4F218AA7B30076E3F6 /* Sources */,
+				EE192C50218AA7B30076E3F6 /* Frameworks */,
+				EE192C51218AA7B30076E3F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE192C55218AA7B30076E3F6 /* PBXTargetDependency */,
+			);
+			name = XJDLNAProgramUITests;
+			productName = XJDLNAProgramUITests;
+			productReference = EE192C53218AA7B30076E3F6 /* XJDLNAProgramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE192C33218AA7AB0076E3F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = XJCode;
+				TargetAttributes = {
+					EE192C3A218AA7AB0076E3F6 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					EE192C52218AA7B30076E3F6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EE192C3A218AA7AB0076E3F6;
+					};
+				};
+			};
+			buildConfigurationList = EE192C36218AA7AB0076E3F6 /* Build configuration list for PBXProject "XJDLNAProgram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE192C32218AA7AB0076E3F6;
+			productRefGroup = EE192C3C218AA7AB0076E3F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE192C3A218AA7AB0076E3F6 /* XJDLNAProgram */,
+				EE192C52218AA7B30076E3F6 /* XJDLNAProgramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE192C39218AA7AB0076E3F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE192C99218AA8B80076E3F6 /* Info.plist in Resources */,
+				EE192C4B218AA7B30076E3F6 /* LaunchScreen.storyboard in Resources */,
+				EE192C48218AA7B30076E3F6 /* Assets.xcassets in Resources */,
+				EE192C46218AA7AB0076E3F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE192C51218AA7B30076E3F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE192C37218AA7AB0076E3F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE192CA2218AA8B80076E3F6 /* View+MASAdditions.m in Sources */,
+				EE192C43218AA7AB0076E3F6 /* ViewController.m in Sources */,
+				EE192C70218AA7DC0076E3F6 /* WD_DMRControl.mm in Sources */,
+				EE192C6F218AA7DC0076E3F6 /* PltMediaController.mm in Sources */,
+				EE192C4E218AA7B30076E3F6 /* main.m in Sources */,
+				EE192C72218AA7DC0076E3F6 /* WDTransportResponseInfo.m in Sources */,
+				EE192CA3218AA8B80076E3F6 /* ViewController+MASAdditions.m in Sources */,
+				EE192C9E218AA8B80076E3F6 /* MASViewAttribute.m in Sources */,
+				EE192C9A218AA8B80076E3F6 /* MASCompositeConstraint.m in Sources */,
+				EE192C71218AA7DC0076E3F6 /* WD_RenderDeviceModel.m in Sources */,
+				EE192C7C218AA8500076E3F6 /* DLNAViewController.m in Sources */,
+				EE192C9C218AA8B80076E3F6 /* MASConstraintMaker.m in Sources */,
+				EE192C9B218AA8B80076E3F6 /* MASConstraint.m in Sources */,
+				EE192CA1218AA8B80076E3F6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				EE192C9D218AA8B80076E3F6 /* MASLayoutConstraint.m in Sources */,
+				EE192CA0218AA8B80076E3F6 /* NSArray+MASAdditions.m in Sources */,
+				EE192C7B218AA8500076E3F6 /* DLNAHeaderView.m in Sources */,
+				EE192C7D218AA8500076E3F6 /* CustomTextField.m in Sources */,
+				EE192C40218AA7AB0076E3F6 /* AppDelegate.m in Sources */,
+				EE192C9F218AA8B80076E3F6 /* MASViewConstraint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE192C4F218AA7B30076E3F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE192C58218AA7B30076E3F6 /* XJDLNAProgramUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE192C55218AA7B30076E3F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE192C3A218AA7AB0076E3F6 /* XJDLNAProgram */;
+			targetProxy = EE192C54218AA7B30076E3F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE192C44218AA7AB0076E3F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE192C45218AA7AB0076E3F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE192C49218AA7B30076E3F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE192C4A218AA7B30076E3F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE192C5A218AA7B30076E3F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE192C5B218AA7B30076E3F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE192C5D218AA7B30076E3F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62S2T4922W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XJDLNAProgram/DLNA",
+				);
+				INFOPLIST_FILE = XJDLNAProgram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE192C5E218AA7B30076E3F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62S2T4922W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XJDLNAProgram/DLNA",
+				);
+				INFOPLIST_FILE = XJDLNAProgram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE192C60218AA7B30076E3F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJDLNAProgramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XJDLNAProgram;
+			};
+			name = Debug;
+		};
+		EE192C61218AA7B30076E3F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJDLNAProgramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XJDLNAProgram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE192C36218AA7AB0076E3F6 /* Build configuration list for PBXProject "XJDLNAProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE192C5A218AA7B30076E3F6 /* Debug */,
+				EE192C5B218AA7B30076E3F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE192C5C218AA7B30076E3F6 /* Build configuration list for PBXNativeTarget "XJDLNAProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE192C5D218AA7B30076E3F6 /* Debug */,
+				EE192C5E218AA7B30076E3F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE192C5F218AA7B30076E3F6 /* Build configuration list for PBXNativeTarget "XJDLNAProgramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE192C60218AA7B30076E3F6 /* Debug */,
+				EE192C61218AA7B30076E3F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE192C33218AA7AB0076E3F6 /* Project object */;
+}
