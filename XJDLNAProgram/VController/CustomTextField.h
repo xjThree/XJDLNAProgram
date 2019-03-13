@@ -1,9 +1,9 @@
 //
 //  CustomTextField.h
-//  多屏互动
+//  DLNA
 //
-//  Created by WonderTek on 2018/10/9.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/10/9.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

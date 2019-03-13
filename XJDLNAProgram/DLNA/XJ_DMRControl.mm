@@ -1,30 +1,30 @@
 //
-//  WD_DMRControl.m
+//  XJ_DMRControl.m
 //  Demo3
 //
-//  Created by WonderTek on 2018/8/30.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/8/30.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
-#import "WD_DMRControl.h"
+#import "XJ_DMRControl.h"
 #import "PltMediaController.h"
 #import <Platinum/Platinum.h>
 
-@interface WD_DMRControl()
+@interface XJ_DMRControl()
 {
     PLT_UPnP *upnp;
     PltMediaController *controller;
     
 }
 @end
-@implementation WD_DMRControl
- static WD_DMRControl *dmrControl;
+@implementation XJ_DMRControl
+ static XJ_DMRControl *dmrControl;
 
 + (instancetype)sharedInstance{
    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        dmrControl = [[WD_DMRControl alloc] init];
+        dmrControl = [[XJ_DMRControl alloc] init];
     });
     return dmrControl;
 }
@@ -72,14 +72,14 @@
     }
 }
 
-- (NSArray<WD_RenderDeviceModel*> *)getActiveRenders{
-    NSMutableArray<WD_RenderDeviceModel *> *renderArray = [NSMutableArray new];
+- (NSArray<XJ_RenderDeviceModel*> *)getActiveRenders{
+    NSMutableArray<XJ_RenderDeviceModel *> *renderArray = [NSMutableArray new];
     const PLT_StringMap rendersNameTable = controller->getMediaRenderersNameTable();
     NPT_List<PLT_StringMapEntry *>::Iterator entry = rendersNameTable.GetEntries().GetFirstItem();
     while (entry) {
-        WD_RenderDeviceModel * renderModel = [[WD_RenderDeviceModel alloc] init];
-        renderModel.wd_name = [NSString stringWithUTF8String:(const char *)(*entry)->GetValue()];
-        renderModel.wd_uuid = [NSString stringWithUTF8String:(const char *)(*entry)->GetKey()];
+        XJ_RenderDeviceModel * renderModel = [[XJ_RenderDeviceModel alloc] init];
+        renderModel.XJ_name = [NSString stringWithUTF8String:(const char *)(*entry)->GetValue()];
+        renderModel.XJ_uuid = [NSString stringWithUTF8String:(const char *)(*entry)->GetKey()];
         
         [renderArray addObject:renderModel];
         ++entry;

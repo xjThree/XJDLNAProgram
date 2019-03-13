@@ -1,20 +1,20 @@
 //
 //  DLNAViewController.m
-//  多屏互动
+//  DLNA
 //
-//  Created by WonderTek on 2018/9/11.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/9/11.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
 #import "DLNAViewController.h"
 #import "DLNAHeaderView.h"
-#import "WD_DMRControl.h"
+#import "XJ_DMRControl.h"
 #import "CustomTextField.h"
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 
-@interface DLNAViewController ()<UITableViewDelegate,UITableViewDataSource,WD_DMRProtocolDelegate>
+@interface DLNAViewController ()<UITableViewDelegate,UITableViewDataSource,XJ_DMRProtocolDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UITableView *deviceListTableView;
@@ -25,7 +25,7 @@
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableArray *deviceDataArray;
 
-@property (nonatomic,strong) WD_RenderDeviceModel *model;
+@property (nonatomic,strong) XJ_RenderDeviceModel *model;
 
 @end
 
@@ -52,7 +52,7 @@
 }
 
 - (void)setNavigate{
-    self.title = @"多屏互动DLNA近场";
+    self.title = @"DLNA";
     self.view.backgroundColor = [UIColor whiteColor];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImageEdgeInsets:UIEdgeInsetsMake(0, -30, 0, 0)];
@@ -138,10 +138,10 @@
         _textField.valueCallBack = ^(NSIndexPath *indexPath) {
             [weakSelf.textField.textField resignFirstResponder];
             if (indexPath.row == 5) {
-                [[WD_DMRControl sharedInstance] setSeekTime:[weakSelf.textField.textField.text integerValue]];
+                [[XJ_DMRControl sharedInstance] setSeekTime:[weakSelf.textField.textField.text integerValue]];
             }
             if (indexPath.row == 7) {
-                [[WD_DMRControl sharedInstance] setVolume:[weakSelf.textField.textField.text integerValue]];
+                [[XJ_DMRControl sharedInstance] setVolume:[weakSelf.textField.textField.text integerValue]];
             }
             weakSelf.textField.textField.text = @"";
         };
@@ -169,12 +169,12 @@
         return cell;
     }else{
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"deviceCellId"];
-        WD_RenderDeviceModel *model = self.deviceDataArray[indexPath.row];
+        XJ_RenderDeviceModel *model = self.deviceDataArray[indexPath.row];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
         }
-        cell.textLabel.text = model.wd_name;
-        cell.detailTextLabel.text = model.wd_uuid;
+        cell.textLabel.text = model.XJ_name;
+        cell.detailTextLabel.text = model.XJ_uuid;
         return cell;
     }
 }
@@ -184,7 +184,7 @@
         switch (indexPath.row) {
             case 0://初始化
             {
-                [[WD_DMRControl sharedInstance] setDelegate:self];
+                [[XJ_DMRControl sharedInstance] setDelegate:self];
                 self.textView.text = [self.textView.text stringByAppendingString:[NSString stringWithFormat:@"\n\n初始化成功..."]];
             }
                 break;
@@ -192,31 +192,31 @@
             {
                 [self.deviceDataArray removeAllObjects];
                 [self.deviceListTableView reloadData];
-               [[WD_DMRControl sharedInstance] start];
+               [[XJ_DMRControl sharedInstance] start];
                 self.textView.text = [self.textView.text stringByAppendingString:[NSString stringWithFormat:@"\n\n搜索设备中..."]];
             }
                 break;
             case 2:
             {
                 if (self.model) {
-                    [[WD_DMRControl sharedInstance] chooseRenderWithUUID:self.model.wd_uuid];//绑定
-                    [self.headerView setConnectDeviceState:[NSString stringWithFormat:@"已连接：%@",self.model.wd_uuid]];
+                    [[XJ_DMRControl sharedInstance] chooseRenderWithUUID:self.model.XJ_uuid];//绑定
+                    [self.headerView setConnectDeviceState:[NSString stringWithFormat:@"已连接：%@",self.model.XJ_uuid]];
                     self.textView.text = [self.textView.text stringByAppendingString:[NSString stringWithFormat:@"\n\n绑定成功"]];
-                    [WD_DMRControl sharedInstance].delegate = self;
-                    [[WD_DMRControl sharedInstance] renderSetAVTransportWithURI:@"http://asp.cntv.lxdns.com/asp/hls/450/0303000a/3/default/9425de84e6874da305ba49949397da66/450.m3u8" mediaInfo:@""];
-                    [[WD_DMRControl sharedInstance] play];   //播放
+                    [XJ_DMRControl sharedInstance].delegate = self;
+                    [[XJ_DMRControl sharedInstance] renderSetAVTransportWithURI:@"http://asp.cntv.lxdns.com/asp/hls/450/0303000a/3/default/9425de84e6874da305ba49949397da66/450.m3u8" mediaInfo:@""];
+                    [[XJ_DMRControl sharedInstance] play];   //播放
                 }
             }
                 break;
             case 3:
             {
-                [[WD_DMRControl sharedInstance] pause]; //暂停
+                [[XJ_DMRControl sharedInstance] pause]; //暂停
             }
                 break;
             case 4:
             {
                 [self.headerView setConnectDeviceState:@"未连接"];
-                [[WD_DMRControl sharedInstance] stop]; //停止
+                [[XJ_DMRControl sharedInstance] stop]; //停止
             }
                 break;
             case 5://跳转到进度
@@ -226,7 +226,7 @@
                 break;
             case 6:
                 //获取当前播放音量
-                [[WD_DMRControl sharedInstance] getVolume];
+                [[XJ_DMRControl sharedInstance] getVolume];
                 break;
             case 7://设置音量
             {
@@ -235,21 +235,21 @@
                 break;
             case 8://获取播放状态
             {
-                [[WD_DMRControl sharedInstance] getInfo];
+                [[XJ_DMRControl sharedInstance] getInfo];
             }
                 break;
             default:
                 break;
         }
     }else{
-        WD_RenderDeviceModel *model = self.deviceDataArray[indexPath.row];
+        XJ_RenderDeviceModel *model = self.deviceDataArray[indexPath.row];
         self.model = model;
     }
 }
 
-#pragma mark WD_DMRProtocolDelegate
+#pragma mark XJ_DMRProtocolDelegate
 - (void)onDMRAdded{
-    self.deviceDataArray = [[WD_DMRControl sharedInstance] getActiveRenders].mutableCopy;
+    self.deviceDataArray = [[XJ_DMRControl sharedInstance] getActiveRenders].mutableCopy;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.deviceListTableView reloadData];
     });
@@ -301,7 +301,7 @@
 
 - (void)dealloc
 {
-    [[WD_DMRControl sharedInstance] upnpStop];
+    [[XJ_DMRControl sharedInstance] upnpStop];
     NSLog(@"DLNA页面已销毁");
 }
 

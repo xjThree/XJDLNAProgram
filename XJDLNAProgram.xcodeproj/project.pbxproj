@@ -15,8 +15,8 @@
 		EE192C4E218AA7B30076E3F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C4D218AA7B30076E3F6 /* main.m */; };
 		EE192C58218AA7B30076E3F6 /* XJDLNAProgramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C57218AA7B30076E3F6 /* XJDLNAProgramUITests.m */; };
 		EE192C6F218AA7DC0076E3F6 /* PltMediaController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */; };
-		EE192C70218AA7DC0076E3F6 /* WD_DMRControl.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */; };
-		EE192C71218AA7DC0076E3F6 /* WD_RenderDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */; };
+		EE192C70218AA7DC0076E3F6 /* XJ_DMRControl.mm in Sources */ = {isa = PBXBuildFile; fileRef = EE192C68218AA7DC0076E3F6 /* XJ_DMRControl.mm */; };
+		EE192C71218AA7DC0076E3F6 /* XJ_RenderDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C6A218AA7DC0076E3F6 /* XJ_RenderDeviceModel.m */; };
 		EE192C72218AA7DC0076E3F6 /* WDTransportResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */; };
 		EE192C7B218AA8500076E3F6 /* DLNAHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C75218AA8500076E3F6 /* DLNAHeaderView.m */; };
 		EE192C7C218AA8500076E3F6 /* DLNAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE192C78218AA8500076E3F6 /* DLNAViewController.m */; };
@@ -81,10 +81,10 @@
 		EE192C64218AA7DC0076E3F6 /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
 		EE192C65218AA7DC0076E3F6 /* PltMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PltMediaController.h; sourceTree = "<group>"; };
 		EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PltMediaController.mm; sourceTree = "<group>"; };
-		EE192C67218AA7DC0076E3F6 /* WD_DMRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WD_DMRControl.h; sourceTree = "<group>"; };
-		EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WD_DMRControl.mm; sourceTree = "<group>"; };
-		EE192C69218AA7DC0076E3F6 /* WD_RenderDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WD_RenderDeviceModel.h; sourceTree = "<group>"; };
-		EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WD_RenderDeviceModel.m; sourceTree = "<group>"; };
+		EE192C67218AA7DC0076E3F6 /* XJ_DMRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJ_DMRControl.h; sourceTree = "<group>"; };
+		EE192C68218AA7DC0076E3F6 /* XJ_DMRControl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XJ_DMRControl.mm; sourceTree = "<group>"; };
+		EE192C69218AA7DC0076E3F6 /* XJ_RenderDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJ_RenderDeviceModel.h; sourceTree = "<group>"; };
+		EE192C6A218AA7DC0076E3F6 /* XJ_RenderDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJ_RenderDeviceModel.m; sourceTree = "<group>"; };
 		EE192C6B218AA7DC0076E3F6 /* WDTransportResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransportResponseInfo.h; sourceTree = "<group>"; };
 		EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransportResponseInfo.m; sourceTree = "<group>"; };
 		EE192C75218AA8500076E3F6 /* DLNAHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAHeaderView.m; sourceTree = "<group>"; };
@@ -194,10 +194,10 @@
 				EE192C64218AA7DC0076E3F6 /* Platinum.framework */,
 				EE192C65218AA7DC0076E3F6 /* PltMediaController.h */,
 				EE192C66218AA7DC0076E3F6 /* PltMediaController.mm */,
-				EE192C67218AA7DC0076E3F6 /* WD_DMRControl.h */,
-				EE192C68218AA7DC0076E3F6 /* WD_DMRControl.mm */,
-				EE192C69218AA7DC0076E3F6 /* WD_RenderDeviceModel.h */,
-				EE192C6A218AA7DC0076E3F6 /* WD_RenderDeviceModel.m */,
+				EE192C67218AA7DC0076E3F6 /* XJ_DMRControl.h */,
+				EE192C68218AA7DC0076E3F6 /* XJ_DMRControl.mm */,
+				EE192C69218AA7DC0076E3F6 /* XJ_RenderDeviceModel.h */,
+				EE192C6A218AA7DC0076E3F6 /* XJ_RenderDeviceModel.m */,
 				EE192C6B218AA7DC0076E3F6 /* WDTransportResponseInfo.h */,
 				EE192C6C218AA7DC0076E3F6 /* WDTransportResponseInfo.m */,
 			);
@@ -354,14 +354,14 @@
 			files = (
 				EE192CA2218AA8B80076E3F6 /* View+MASAdditions.m in Sources */,
 				EE192C43218AA7AB0076E3F6 /* ViewController.m in Sources */,
-				EE192C70218AA7DC0076E3F6 /* WD_DMRControl.mm in Sources */,
+				EE192C70218AA7DC0076E3F6 /* XJ_DMRControl.mm in Sources */,
 				EE192C6F218AA7DC0076E3F6 /* PltMediaController.mm in Sources */,
 				EE192C4E218AA7B30076E3F6 /* main.m in Sources */,
 				EE192C72218AA7DC0076E3F6 /* WDTransportResponseInfo.m in Sources */,
 				EE192CA3218AA8B80076E3F6 /* ViewController+MASAdditions.m in Sources */,
 				EE192C9E218AA8B80076E3F6 /* MASViewAttribute.m in Sources */,
 				EE192C9A218AA8B80076E3F6 /* MASCompositeConstraint.m in Sources */,
-				EE192C71218AA7DC0076E3F6 /* WD_RenderDeviceModel.m in Sources */,
+				EE192C71218AA7DC0076E3F6 /* XJ_RenderDeviceModel.m in Sources */,
 				EE192C7C218AA8500076E3F6 /* DLNAViewController.m in Sources */,
 				EE192C9C218AA8B80076E3F6 /* MASConstraintMaker.m in Sources */,
 				EE192C9B218AA8B80076E3F6 /* MASConstraint.m in Sources */,
@@ -538,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgram;
+				PRODUCT_BUNDLE_IDENTIFIER = xjThree.XJDLNAProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -559,7 +559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgram;
+				PRODUCT_BUNDLE_IDENTIFIER = xjThree.XJDLNAProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -575,7 +575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgramUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = xjThree.XJDLNAProgramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XJDLNAProgram;
@@ -592,7 +592,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WonderTek.XJDLNAProgramUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = xjThree.XJDLNAProgramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XJDLNAProgram;

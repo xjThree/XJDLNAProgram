@@ -1,16 +1,16 @@
 //
-//  WD_DMRControl.h
+//  XJ_DMRControl.h
 //  Demo3
 //
-//  Created by WonderTek on 2018/8/30.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/8/30.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "WD_RenderDeviceModel.h"
+#import "XJ_RenderDeviceModel.h"
 #import "WDTransportResponseInfo.h"
 
-@protocol WD_DMRProtocolDelegate <NSObject>
+@protocol XJ_DMRProtocolDelegate <NSObject>
 @optional
 
 /**
@@ -50,9 +50,9 @@
 
 @end
 
-@interface WD_DMRControl : NSObject
+@interface XJ_DMRControl : NSObject
 
-@property (nonatomic,weak) id<WD_DMRProtocolDelegate> delegate;
+@property (nonatomic,weak) id<XJ_DMRProtocolDelegate> delegate;
 
 + (instancetype)sharedInstance;
 
@@ -62,7 +62,7 @@
 
 - (void)upnpStop;
 
-- (NSArray <WD_RenderDeviceModel *> *)getActiveRenders;
+- (NSArray <XJ_RenderDeviceModel *> *)getActiveRenders;
 
 - (void)chooseRenderWithUUID:(NSString *)uuid;
 

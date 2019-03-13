@@ -2,8 +2,8 @@
 //  PltMediaController.m
 //  Demo3
 //
-//  Created by WonderTek on 2018/8/30.
-//  Copyright © 2018年 WonderTek-XJ. All rights reserved.
+//  Created by xjThree on 2018/8/30.
+//  Copyright © 2018年 xjThree-XJ. All rights reserved.
 //
 
 #import "PltMediaController.h"
@@ -11,12 +11,12 @@
 #define CHARTONSSTRING(x) [NSString stringWithUTF8String:x]
 #define LONGLONGSTRING(x) [NSString stringWithFormat:@"%lld",x]
 
-PltMediaController::PltMediaController(PLT_CtrlPointReference& ctrlPoint,WD_DMRControl * delegateWrapper) :
+PltMediaController::PltMediaController(PLT_CtrlPointReference& ctrlPoint,XJ_DMRControl * delegateWrapper) :
 PLT_SyncMediaBrowser(ctrlPoint),
 PLT_MediaController(ctrlPoint),
-wd_Target(delegateWrapper)
+XJ_Target(delegateWrapper)
 {
-    wd_CurBrowseDirectoryStack.Push("0");
+    XJ_CurBrowseDirectoryStack.Push("0");
     
     PLT_MediaController::SetDelegate(this);
 }
@@ -27,21 +27,21 @@ PltMediaController::~PltMediaController()
 
 void
 PltMediaController::GetCurMediaRenderer(PLT_DeviceDataReference &renderer){
-    NPT_AutoLock lock(wd_CurMediaRendererLock);
-    if (wd_CurMediaRenderer.IsNull()) {
+    NPT_AutoLock lock(XJ_CurMediaRendererLock);
+    if (XJ_CurMediaRenderer.IsNull()) {
         //没有索索到设备
     }else{
-        renderer = wd_CurMediaRenderer;
+        renderer = XJ_CurMediaRenderer;
     }
 }
 
 const PLT_StringMap
 PltMediaController:: getMediaRenderersNameTable()
 {
-    const NPT_Lock<PLT_DeviceMap>& deviceList = wd_MediaRenderers;
+    const NPT_Lock<PLT_DeviceMap>& deviceList = XJ_MediaRenderers;
     
     PLT_StringMap            namesTable;
-    NPT_AutoLock             lock(wd_MediaServers);
+    NPT_AutoLock             lock(XJ_MediaServers);
     
     // create a map with the device UDN -> device Name
     const NPT_List<PLT_DeviceMapEntry*>& entries = deviceList.GetEntries();
@@ -61,9 +61,9 @@ PltMediaController:: getMediaRenderersNameTable()
  */
 void PltMediaController::chooseMediaRenderer(NPT_String chosenUUID)
 {
-    NPT_AutoLock lock(wd_CurMediaRendererLock);
+    NPT_AutoLock lock(XJ_CurMediaRendererLock);
     
-    wd_CurMediaRenderer = ChooseDevice(wd_MediaRenderers, chosenUUID);
+    XJ_CurMediaRenderer = ChooseDevice(XJ_MediaRenderers, chosenUUID);
 }
 
 ///查找设备
@@ -214,12 +214,12 @@ PltMediaController::OnMRAdded(PLT_DeviceDataReference& device)
     PLT_Service* service;
     if (NPT_SUCCEEDED(device->FindServiceByType("urn:schemas-upnp-org:service:AVTransport:*", service)))
     {
-        NPT_AutoLock lock(wd_MediaRenderers);
-        wd_MediaRenderers.Put(uuid, device);
+        NPT_AutoLock lock(XJ_MediaRenderers);
+        XJ_MediaRenderers.Put(uuid, device);
     }
-    if(wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(onDMRAdded)])
+    if(XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(onDMRAdded)])
     {
-        [wd_Target.delegate onDMRAdded];
+        [XJ_Target.delegate onDMRAdded];
     }
     
     return true;
@@ -230,12 +230,12 @@ PltMediaController::OnMRAdded(PLT_DeviceDataReference& device)
  */
 void
 PltMediaController::OnGetTransportInfoResult(NPT_Result res, PLT_DeviceDataReference &device, PLT_TransportInfo *info, void *userdata){
-    if (wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(getTransportInfoResponse:)]){
+    if (XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(getTransportInfoResponse:)]){
         WDTransportResponseInfo *response = [[WDTransportResponseInfo alloc] initWithResult:res userData:(__bridge id)userdata deviceUUID:CHARTONSSTRING(device->GetUUID())];
         response.cur_transport_state = CHARTONSSTRING(info->cur_transport_state);
         response.cur_transport_status = CHARTONSSTRING(info->cur_transport_status);
         response.cur_speed = CHARTONSSTRING(info->cur_speed);
-        [wd_Target.delegate getTransportInfoResponse:response];
+        [XJ_Target.delegate getTransportInfoResponse:response];
     }
 }
 
@@ -244,7 +244,7 @@ PltMediaController::OnGetTransportInfoResult(NPT_Result res, PLT_DeviceDataRefer
  */
 void
 PltMediaController::OnGetPositionInfoResult( NPT_Result res,PLT_DeviceDataReference&device,PLT_PositionInfo*info,void*userdata){
-    if(wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(getTransportPositionInfoResponse:)]){
+    if(XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(getTransportPositionInfoResponse:)]){
         WDTransportPositionInfo *response = [[WDTransportPositionInfo alloc] initWithResult:res userData:(__bridge id)userdata deviceUUID:CHARTONSSTRING(device->GetUUID())];
         response.track = info->track;
         response.rel_count = info->rel_count;
@@ -254,7 +254,7 @@ PltMediaController::OnGetPositionInfoResult( NPT_Result res,PLT_DeviceDataRefere
         response.abs_time = LONGLONGSTRING(info->abs_time.ToSeconds());
         response.track_duration = LONGLONGSTRING(info->track_duration.ToSeconds());
         response.track_metadata = CHARTONSSTRING(info->track_metadata);
-        [wd_Target.delegate getTransportPositionInfoResponse:response];
+        [XJ_Target.delegate getTransportPositionInfoResponse:response];
     }
 }
 
@@ -264,11 +264,11 @@ PltMediaController::OnGetPositionInfoResult( NPT_Result res,PLT_DeviceDataRefere
 void
 PltMediaController::OnSeekResult(NPT_Result res,PLT_DeviceDataReference &device,void *userdata)
 {
-    if(wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(OnSeekResult:)])
+    if(XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(OnSeekResult:)])
     {
         NSInteger result = res;
         WDTransportResponseInfo *response = [[WDTransportResponseInfo alloc] initWithResult:result userData:(__bridge id)userdata deviceUUID:CHARTONSSTRING(device->GetUUID())];
-        [wd_Target.delegate OnSeekResult:response];
+        [XJ_Target.delegate OnSeekResult:response];
     }
 }
 
@@ -278,13 +278,13 @@ PltMediaController::OnSeekResult(NPT_Result res,PLT_DeviceDataReference &device,
 void PltMediaController::
 OnGetVolumeResult(NPT_Result res,PLT_DeviceDataReference &device, const char *channel,  NPT_UInt32 volume, void *userdata)
 {
-    if(wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(getVolumeResponse:)])
+    if(XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(getVolumeResponse:)])
     {
         NSInteger result = res;
         WDTransportVolumeInfo *volumeInfo = [[WDTransportVolumeInfo alloc] initWithResult:result userData:(__bridge id)userdata deviceUUID:CHARTONSSTRING(device->GetUUID())];
         volumeInfo.channel = CHARTONSSTRING(channel);
         volumeInfo.volume = volume;
-        [wd_Target.delegate getVolumeResponse:volumeInfo];
+        [XJ_Target.delegate getVolumeResponse:volumeInfo];
     }
 }
 
@@ -294,10 +294,10 @@ OnGetVolumeResult(NPT_Result res,PLT_DeviceDataReference &device, const char *ch
 void PltMediaController::
 OnSetVolumeResult(NPT_Result res,PLT_DeviceDataReference &device,void *userdata)
 {
-    if(wd_Target.delegate && [wd_Target.delegate respondsToSelector:@selector(setVolumeResponse:)])
+    if(XJ_Target.delegate && [XJ_Target.delegate respondsToSelector:@selector(setVolumeResponse:)])
     {
         WDTransportResponseInfo *response = [[WDTransportResponseInfo alloc] initWithResult:res userData:(__bridge id)userdata deviceUUID:CHARTONSSTRING(device->GetUUID())];
-        [wd_Target.delegate setVolumeResponse:response];
+        [XJ_Target.delegate setVolumeResponse:response];
         
     }
 }

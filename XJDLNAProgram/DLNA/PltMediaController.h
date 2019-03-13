@@ -2,8 +2,8 @@
 //  PltMediaController.h
 //  Demo3
 //
-//  Created by WonderTek on 2018/8/30.
-//  Copyright © 2018年 WonderTek-XJ. All rights reserved.
+//  Created by xjThree on 2018/8/30.
+//  Copyright © 2018年 xjThree-XJ. All rights reserved.
 //
 
 
@@ -20,7 +20,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#import "WD_DMRControl.h"
+#import "XJ_DMRControl.h"
 
 typedef NPT_Map<NPT_String, NPT_String>              PLT_StringMap;
 typedef NPT_Lock<PLT_StringMap>                      PLT_LockStringMap;
@@ -31,7 +31,7 @@ public PLT_MediaController,
 public PLT_MediaControllerDelegate{
 public:
     //构造方法
-    PltMediaController(PLT_CtrlPointReference &ctrlPoint,WD_DMRControl *delegateWrapper);
+    PltMediaController(PLT_CtrlPointReference &ctrlPoint,XJ_DMRControl *delegateWrapper);
     virtual ~PltMediaController();
     virtual bool OnMRAdded(PLT_DeviceDataReference &device);
     void GetCurMediaRenderer(PLT_DeviceDataReference& renderer);
@@ -69,12 +69,12 @@ public:
     
     
 private:
-    WD_DMRControl *wd_Target;
-    NPT_Mutex wd_CurMediaRendererLock;
-    PLT_DeviceDataReference wd_CurMediaRenderer;
-    NPT_Stack<NPT_String> wd_CurBrowseDirectoryStack;
-    NPT_Lock<PLT_DeviceMap> wd_MediaRenderers;
-    NPT_Lock<PLT_DeviceMap> wd_MediaServers;
+    XJ_DMRControl *XJ_Target;
+    NPT_Mutex XJ_CurMediaRendererLock;
+    PLT_DeviceDataReference XJ_CurMediaRenderer;
+    NPT_Stack<NPT_String> XJ_CurBrowseDirectoryStack;
+    NPT_Lock<PLT_DeviceMap> XJ_MediaRenderers;
+    NPT_Lock<PLT_DeviceMap> XJ_MediaServers;
     PLT_DeviceDataReference ChooseDevice(const NPT_Lock<PLT_DeviceMap>& deviceList, NPT_String chosenUUID);
 };
 

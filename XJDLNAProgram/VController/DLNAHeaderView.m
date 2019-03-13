@@ -1,9 +1,9 @@
 //
 //  DLNAHeaderView.m
-//  多屏互动
+//  DLNA
 //
-//  Created by WonderTek on 2018/9/11.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/9/11.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
 #import "DLNAHeaderView.h"

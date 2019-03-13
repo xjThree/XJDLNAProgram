@@ -2,8 +2,8 @@
 //  WDTransportResponseInfo.m
 //  Demo3
 //
-//  Created by WonderTek on 2018/9/4.
-//  Copyright © 2018年 WonderTek. All rights reserved.
+//  Created by xjThree on 2018/9/4.
+//  Copyright © 2018年 xjThree. All rights reserved.
 //
 
 #import "WDTransportResponseInfo.h"
